@@ -23,4 +23,5 @@ A idéia é criar/manipular uma inteligência artificial capaz de desenvolver pe
 
 ## Instruções de Utilização:
 > python 3.10.111 instalado <br/>
-pip install transformers no terminal
+pip install transformers no terminal <br/>
+pip install torch pip install torchvision (dentro de C:\Users\username)

@@ -16,9 +16,7 @@ A idéia é criar/manipular uma inteligência artificial capaz de desenvolver pe
 
 ## Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
-|RF-001| Criar perguntas relacionadas as áreas de conhecimento propostas. | ALTA | 
-|RF-002| Corrigir respostas dissertativas para essas perguntas. | ALTA |
-
-
+|ID    | Descrição do Requisito  | Prioridade | Status: |
+|------|-----------------------------------------|----|------|
+|RF-001| Criar perguntas relacionadas as áreas de conhecimento propostas. | ALTA | :x: |
+|RF-002| Corrigir respostas dissertativas para essas perguntas. | ALTA | :x: |

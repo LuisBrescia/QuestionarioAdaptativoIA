@@ -9,7 +9,8 @@ body {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000
 header {display: flex; justify-content: center; background-color: #ddd; color: #000; padding: 10px;}
 
 main {display: flex; justify-content: center; padding: 10px; gap: 1em;}
-main ul {display: flex; flex-flow: column nowrap; gap: 1em; align-items: center;}
+
+main form {display: flex; flex-flow: column nowrap; gap: 1em; align-items: center;}
 
 
 footer {

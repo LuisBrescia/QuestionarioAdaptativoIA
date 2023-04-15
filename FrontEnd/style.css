@@ -1,0 +1,23 @@
+* {margin: 0; padding: 0;}
+
+/* * Path: FrontEnd\style.css */
+li {list-style: none;}
+a {text-decoration: none; color: #147efb;}
+a:hover {color: #5fc9f8;}
+body {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; background-color: #eee; height: 720px;}
+
+header {display: flex; justify-content: center; background-color: #ddd; color: #000; padding: 10px;}
+
+main {display: flex; justify-content: center; padding: 10px; gap: 1em;}
+main ul {display: flex; flex-flow: column nowrap; gap: 1em; align-items: center;}
+
+
+footer {
+    background-color: #ddd;  
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

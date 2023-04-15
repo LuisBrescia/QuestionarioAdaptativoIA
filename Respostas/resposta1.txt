@@ -1,1 +1,7 @@
-Segunda resposta
+entrega (delivery): o sistema deve entregar os dados ao destino correto. os dados devem ser recebidos somente pelo 
+dispositivo ou usuário de destino. confiabilidade: o sistema deve garantir a entrega dos dados. 
+dados modificados ou corrompidos em uma transmissão são pouco úteis.
+tempo de atraso: o sistema deve entregar dados em um tempo finito e predeterminado. 
+dados entregues tardiamente são pouco úteis. por exemplo, no caso de transmissões multimídia, como vídeo, 
+os atrasos não são desejáveis, de modo que eles devem ser entregues 
+praticamente no mesmo instante em que foram produzidos, isto é, sem atrasos significativos.

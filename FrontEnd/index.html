@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questionário Adaptativo</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='style.css') }}">
 </head>
 <body>
     <header>
@@ -13,13 +14,18 @@
     </header>
 
     <main>
-        <form action="/" method="post">
+        <form action="/" method="POST">
             <label for="resposta1"><h2>Questão 1</h2></label>
-            <textarea id="resposta1" name="resposta1" rows="5" cols="50"></textarea>
+            <label for="resposta1"><h3>O que determina a eficiência de um sistema de comunicação de dados?</h3></label>
+            <textarea name = "respostaAluno" id="respostaAluno" rows="5" cols="50"></textarea>
           
             <input type="submit" value="Enviar">
         </form>
     </main>
+
+    <h1 style="text-align: center;">
+        {{ resposta }}
+    </h1>
 
     <footer>
         <h3><a href="https://github.com/LuisBrescia">Luis Brescia</a></h3>

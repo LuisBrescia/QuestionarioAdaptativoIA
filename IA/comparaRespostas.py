@@ -1,8 +1,12 @@
+
 from transformers import BertTokenizer, BertModel
 from flask import Flask, render_template, request
 import torch
-import os
-import math
+
+import logging
+logging.getLogger("transformers.modeling_utils").setLevel(logging.ERROR)
+
+
 
 # Nome do meu site
 questionario = Flask(__name__, template_folder='../FrontEnd', static_folder='../FrontEnd')
@@ -16,6 +20,8 @@ model = BertModel.from_pretrained('bert-base-uncased')
 def comparaRespostas():
 
     respostaAluno = request.form['respostaAluno'].lower()
+    
+    # respostaAluno = "Eu não sei"
     with open('Respostas/resposta1.txt', 'r') as resposta1:
         respostaIA = resposta1.read()
 
@@ -41,9 +47,16 @@ def comparaRespostas():
     print(respostaAluno)
     print(x)
 
+    if x >= 60:
+        status = "APROVADO"
+        statusColor = 'green'
+    else:
+        status = "REPROVADO"
+        statusColor = 'red'
+
     resultado = f"A similaridade entre as duas respostas é de: {x:.2f}%"
 
-    return render_template('index.html', resposta=resultado)
+    return render_template('index.html', resposta=resultado, status=status, statusColor=statusColor)
 
 # Caso esteja rodando o arquivo diretamente, execute o servidor
 if __name__ == '__main__':

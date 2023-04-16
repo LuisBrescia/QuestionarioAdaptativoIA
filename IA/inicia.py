@@ -18,7 +18,8 @@ def problema(numeroQuestao):
     caminhoRespostaIA = f"Respostas/resposta{numeroQuestao}.txt"
     resultado, status = comparaRespostas(respostaAluno, caminhoRespostaIA)
     
-    return render_template('problema.html', resposta=resultado, status=status, questao=numeroQuestao, pergunta = perguntas[f'pergunta{numeroQuestao}'])
+    return render_template('problema.html', resposta=resultado, status=status, questao=numeroQuestao, 
+    respostaAluno = respostaAluno, pergunta = perguntas[f'pergunta{numeroQuestao}'])
 
 if __name__ == '__main__':
     questionario.run(debug=True)

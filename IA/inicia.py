@@ -9,9 +9,13 @@ def inicia():
 
 @questionario.route("/problema", methods=['GET', 'POST'])
 def problema():
-    respostaAluno = request.form['respostaAluno'].lower()
-    resultado, status, statusColor = comparaRespostas(respostaAluno)
-    return render_template('problema.html', resposta=resultado, status=status, statusColor=statusColor)
+    if request.method == 'POST':
+        respostaAluno = request.form['respostaAluno']
+    else:
+        respostaAluno = ''
+
+    resultado, status = comparaRespostas(respostaAluno)
+    return render_template('problema.html', resposta=resultado, status=status)
 
 if __name__ == '__main__':
     questionario.run(debug=True)

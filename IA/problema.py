@@ -7,11 +7,8 @@ logging.getLogger("transformers.modeling_utils").setLevel(logging.ERROR)
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 model = BertModel.from_pretrained('bert-base-uncased')
 
+# def comparaRespostas(respostaAluno):
 def comparaRespostas(respostaAluno):
-
-    # ! Descobrir porque não está funcionando sempre
-    # respostaAluno = request.form['respostaAluno'].lower()
-    # respostaAluno = "ENTENDI CARALHO!!!"
     
     with open('Respostas/resposta1.txt', 'r') as resposta1:
         respostaIA = resposta1.read()
@@ -40,11 +37,13 @@ def comparaRespostas(respostaAluno):
 
     if x >= 60:
         status = "APROVADO"
-        statusColor = 'green'
     else:
         status = "REPROVADO"
-        statusColor = 'red'
 
-    resultado = f"A similaridade entre as duas respostas é de: {x:.2f}%"
+    if respostaAluno == '':
+        resultado = "Resposta não enviada"
+        status = ""
+    else:
+        resultado = f"A similaridade entre as duas respostas é de: {x:.2f}%"
 
-    return resultado, status, statusColor
+    return resultado, status

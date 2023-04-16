@@ -8,10 +8,10 @@ tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 model = BertModel.from_pretrained('bert-base-uncased')
 
 # def comparaRespostas(respostaAluno):
-def comparaRespostas(respostaAluno):
+def comparaRespostas(respostaAluno, caminhoRespostaIA):
     
-    with open('Respostas/resposta1.txt', 'r') as resposta1:
-        respostaIA = resposta1.read()
+    with open(caminhoRespostaIA, 'r') as resposta:
+        respostaIA = resposta.read()
 
     tokenAluno = tokenizer.encode(respostaAluno, add_special_tokens=True)
     tokenIA = tokenizer.encode(respostaIA, add_special_tokens=True)

@@ -14,9 +14,7 @@ def problema():
     else:
         respostaAluno = ''
 
-    caminhoRespostaIA = f"Respostas/resposta{1}.txt"
-    resultado, status = comparaRespostas(respostaAluno, caminhoRespostaIA)
-    
+    resultado, status = comparaRespostas(respostaAluno)
     return render_template('problema.html', resposta=resultado, status=status)
 
 if __name__ == '__main__':

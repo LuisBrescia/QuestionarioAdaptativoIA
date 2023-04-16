@@ -6,3 +6,4 @@ window.onload = function() {
     }       
 }
   
+var answer = document.getElementById("answer");

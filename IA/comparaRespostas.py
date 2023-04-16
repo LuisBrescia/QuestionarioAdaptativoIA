@@ -1,4 +1,3 @@
-
 from transformers import BertTokenizer, BertModel
 from flask import Flask, render_template, request
 import torch
@@ -20,8 +19,9 @@ model = BertModel.from_pretrained('bert-base-uncased')
 def comparaRespostas():
 
     respostaAluno = request.form['respostaAluno'].lower()
-    
+    # ! Descobrir porque não está funcionando sempre
     # respostaAluno = "Eu não sei"
+    
     with open('Respostas/resposta1.txt', 'r') as resposta1:
         respostaIA = resposta1.read()
 

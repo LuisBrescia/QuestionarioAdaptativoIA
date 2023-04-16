@@ -10,9 +10,8 @@
     <script src="{{ url_for('static', filename='script.js') }}"> </script>
 </head>
 <body>
-    <header>
-        <h1>Questionário adaptativo IA</h1>
-        <a href="{{ url_for('inicia') }}"><small>voltar</small></a>
+    <header> 
+        <a class="external" href="{{ url_for('inicia') }}"><h1>Questionário adaptativo IA</h1></a>
     </header>
 
     <main>
@@ -22,16 +21,18 @@
             <textarea name = "respostaAluno" id="respostaAluno" rows="5" cols="50"></textarea>
             <input type="submit" value="Enviar">
         </form>
+        
+        <h1 style="text-align: center;">
+            {{ resposta }}
+        </h1>
+        <h1 id="statusColor" style="text-align: center">
+            {{status}}
+        </h1>
+
     </main>
-
-    <h1 style="text-align: center;">
-        {{ resposta }}
-    </h1>
-
-    <h1 id="statusColor" style="text-align: center">{{status}}</h1>    
-
+        
     <footer>
-        <h3><a href="https://github.com/LuisBrescia">Luis Brescia</a></h3>
+        <h3><a class="external" href="https://github.com/LuisBrescia">Luis Brescia</a></h3>
     </footer>
 
 </body>

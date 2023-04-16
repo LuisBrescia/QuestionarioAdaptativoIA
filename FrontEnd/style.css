@@ -2,24 +2,25 @@
 
 /* * Path: FrontEnd\style.css */
 li {list-style: none;}
-a {text-decoration: none; color: #147efb;}
-a:hover {color: #5fc9f8;}
+.external {text-decoration: none; color: #174afb; padding: 0.5em; border: 1px solid #f0f0f0; border-radius: 5px}
+.external:hover {background-color: #174afb; color: #fff; cursor: pointer;}
 body {font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #333; background-color: #fff; height: 720px;}
 
 header {display: flex; justify-content: center; background-color: #f0f0f0; color: #333; padding: 10px; border-bottom: 1px solid #aaa;}
 
-main {
+form {
     display: flex; justify-content: center;  
-    height: 75%; align-items: center;
+    height: 60%; align-items: center;
     background-color: #f0f0f0;
     width: 50%;
     margin: 2em auto;
     border: 1px solid #aaa;
     border-radius: 5px;
-    padding: 0;
+    padding: 1em;
+    flex-flow: column nowrap; gap: 5em; 
 }
 
-main form {display: flex; flex-flow: column nowrap; gap: 5em; align-items: center; }
+main {display: flex; flex-flow: column wrap; justify-content: space-between; gap: 3em;}
 
 textarea {border: 1px solid #aaa; border-radius: 5px; padding: 5px;}
 [type="submit"] {
@@ -28,10 +29,11 @@ textarea {border: 1px solid #aaa; border-radius: 5px; padding: 5px;}
     color: #174afb;
     font-weight: bolder;
 }
+
 [type="submit"]:hover {background-color: #174afb; color: #fff; cursor: pointer;}
 
 .iniciaQuestionario { width: 100%; height: 100%; font-size: xx-large; padding: 2em;}
-.mainIndex {background-color: #fff; border: none; padding: 0;}
+.mainIndex {background-color: #fff; border: none; padding: 0; width: 50%; margin: 20em auto;}
 
 footer {
     background-color: #f0f0f0;  

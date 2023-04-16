@@ -12,13 +12,23 @@
 <body>
     <header>
         <h1>Questionário adaptativo IA</h1>
+        <a href="{{ url_for('inicia') }}"><small>voltar</small></a>
     </header>
 
-    <main class="mainIndex">
-        <a href="{{ url_for('problema') }}">
-            <input type="submit" class="iniciaQuestionario" value="Clique para iniciar o questionário">
-        </a>
+    <main>
+        <form action="/" method="POST">
+            <label for="resposta1"><h2>Questão 1</h2></label>
+            <label for="resposta1"><h3>O que determina a eficiência de um sistema de comunicação de dados?</h3></label>
+            <textarea name = "respostaAluno" id="respostaAluno" rows="5" cols="50"></textarea>
+            <input type="submit" value="Enviar">
+        </form>
     </main>
+
+    <h1 style="text-align: center;">
+        {{ resposta }}
+    </h1>
+
+    <h1 id="statusColor" style="text-align: center">{{status}}</h1>    
 
     <footer>
         <h3><a href="https://github.com/LuisBrescia">Luis Brescia</a></h3>

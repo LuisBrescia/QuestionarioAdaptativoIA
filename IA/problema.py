@@ -1,26 +1,17 @@
 from transformers import BertTokenizer, BertModel
-from flask import Flask, render_template, request
 import torch
 
 import logging
 logging.getLogger("transformers.modeling_utils").setLevel(logging.ERROR)
 
-
-
-# Nome do meu site
-questionario = Flask(__name__, template_folder='../FrontEnd', static_folder='../FrontEnd')
-
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 model = BertModel.from_pretrained('bert-base-uncased')
 
-# Rota para a página inicial
-@questionario.route("/", methods=['GET', 'POST'])
+def comparaRespostas(respostaAluno):
 
-def comparaRespostas():
-
-    respostaAluno = request.form['respostaAluno'].lower()
     # ! Descobrir porque não está funcionando sempre
-    # respostaAluno = "Eu não sei"
+    # respostaAluno = request.form['respostaAluno'].lower()
+    # respostaAluno = "ENTENDI CARALHO!!!"
     
     with open('Respostas/resposta1.txt', 'r') as resposta1:
         respostaIA = resposta1.read()
@@ -56,8 +47,4 @@ def comparaRespostas():
 
     resultado = f"A similaridade entre as duas respostas é de: {x:.2f}%"
 
-    return render_template('index.html', resposta=resultado, status=status, statusColor=statusColor)
-
-# Caso esteja rodando o arquivo diretamente, execute o servidor
-if __name__ == '__main__':
-    questionario.run(debug=True)
+    return resultado, status, statusColor

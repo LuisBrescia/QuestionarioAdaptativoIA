@@ -28,7 +28,10 @@ textarea {border: 1px solid #aaa; border-radius: 5px; padding: 5px;}
     color: #174afb;
     font-weight: bolder;
 }
-[type="submit"]:hover {background-color: #5fc9f8; color: #fff; cursor: pointer;}
+[type="submit"]:hover {background-color: #174afb; color: #fff; cursor: pointer;}
+
+.iniciaQuestionario { width: 100%; height: 100%; font-size: xx-large; padding: 2em;}
+.mainIndex {background-color: #fff; border: none; padding: 0;}
 
 footer {
     background-color: #f0f0f0;  

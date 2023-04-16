@@ -15,12 +15,34 @@
     </header>
 
     <main>
-        <form action="/problema" method="POST">
-            <label for="resposta1"><h2>Questão 1</h2></label>
-            <label for="resposta1"><h3>O que determina a eficiência de um sistema de comunicação de dados?</h3></label>
+        <form action="/problema{{questao}}" method="POST">
+            <label for="resposta1"><h2>Questão {{questao}}</h2></label>
+            <label for="resposta1"><h3>{{pergunta}}</h3></label>
             <textarea name = "respostaAluno" id="respostaAluno" rows="5" cols="50"></textarea>
             <input type="submit" value="Enviar">
         </form>
+
+        <aside>
+            <a href="{{ url_for('problema', numeroQuestao = 1) }}">
+                <input type="submit" value="1" {% if questao =='1' %}class="colore"{% endif %}>
+            </a>
+            <a href="{{ url_for('problema', numeroQuestao = 2) }}">
+                <input type="submit" value="2" {% if questao =='2' %}class="colore"{% endif %}>
+            </a>
+            <a href="{{ url_for('problema', numeroQuestao = 3) }}">
+                <input type="submit" value="3" {% if questao =='3' %}class="colore"{% endif %}>
+            </a>
+            <a href="{{ url_for('problema', numeroQuestao = 4) }}">
+                <input type="submit" value="4" {% if questao =='4' %}class="colore"{% endif %}>
+            </a>
+            <a href="{{ url_for('problema', numeroQuestao = 5) }}">
+                <input type="submit" value="5" {% if questao =='5' %}class="colore"{% endif %}>
+            </a>
+            <a href="{{ url_for('problema', numeroQuestao = 6) }}">
+                <input type="submit" value="6" {% if questao =='6' %}class="colore"{% endif %}>
+            </a>
+        </aside>
+        
         
         <h1 style="text-align: center;">
             {{ resposta }}

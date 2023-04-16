@@ -22,6 +22,14 @@ form {
 
 main {display: flex; flex-flow: column wrap; justify-content: space-between; gap: 3em;}
 
+aside {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.colore {background-color: #174afb !important; color: #fff !important; cursor: pointer;}
+
 textarea {border: 1px solid #aaa; border-radius: 5px; padding: 5px;}
 [type="submit"] {
     background-color: #fff; width: 5em; height: 30px; 

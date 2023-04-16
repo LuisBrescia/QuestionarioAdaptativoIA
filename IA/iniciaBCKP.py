@@ -7,15 +7,17 @@ questionario = Flask(__name__, template_folder='../FrontEnd', static_folder='../
 def inicia():
     return render_template('index.html')
 
-@questionario.route("/problema", methods=['GET', 'POST'])
-def problema():
+@questionario.route("/problema<numeroQuestao>", methods=['GET', 'POST'])
+def problema(numeroQuestao):
     if request.method == 'POST':
         respostaAluno = request.form['respostaAluno']
     else:
         respostaAluno = ''
 
-    resultado, status = comparaRespostas(respostaAluno)
-    return render_template('problema.html', resposta=resultado, status=status)
+    caminhoRespostaIA = f"Respostas/resposta{numeroQuestao}.txt"
+    resultado, status = comparaRespostas(respostaAluno, caminhoRespostaIA)
+    
+    return render_template('problema.html', resposta=resultado, status=status, questao=numeroQuestao)
 
 if __name__ == '__main__':
     questionario.run(debug=True)

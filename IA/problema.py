@@ -1,15 +1,19 @@
 from transformers import BertTokenizer, BertModel
+from torch.nn.functional import cosine_similarity
 import torch
 
+# ? Esse código é para não aparecer os avisos de erro do modelo, no momentos estou ignorando eles
 import logging
 logging.getLogger("transformers.modeling_utils").setLevel(logging.ERROR)
 
+# ! Carrega o modelo e o tokenizador, não sei como funciona, mas funciona
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 model = BertModel.from_pretrained('bert-base-uncased')
 
-# def comparaRespostas(respostaAluno):
+# * Função que compara as respostas
 def comparaRespostas(respostaAluno, caminhoRespostaIA):
-    
+
+    # ? Importante usar with, para garantir que o arquivo será fechado
     with open(caminhoRespostaIA, 'r') as resposta:
         respostaIA = resposta.read()
 
@@ -24,14 +28,15 @@ def comparaRespostas(respostaAluno, caminhoRespostaIA):
 
     last_hidden_states1 = outputs1[0][:, 0, :]
     last_hidden_states2 = outputs2[0][:, 0, :]
-
-    from torch.nn.functional import cosine_similarity
-    similarity = cosine_similarity(last_hidden_states1, last_hidden_states2)
     
+    similarity = cosine_similarity(last_hidden_states1, last_hidden_states2)
+
+    # > Cálculo provisório, precisa ser melhorado    
     x = similarity.item() 
     x = ((x + 1) / 2) * 100
     x = (x - 50) * 2
 
+    # > Para ajudar no debug
     print(respostaAluno)
     print(x)
 

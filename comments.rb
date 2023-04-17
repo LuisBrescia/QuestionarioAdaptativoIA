@@ -1,0 +1,9 @@
+=begin
+?  Comentário Explicativo ex: A função abaixo insere os tokens [CLP] e [SEP] no ínicio e no fim da leitura
+?  para a IA saber que o texto foi lido por completo
+*  Comentário Informativo ex: A função abaixo insere os tokens na tabela de símbolos 
+>  Comentário de futuras implementações ex: Preciso guardar os valores, abaixo, falta essa função me retornar tais valores 
+!  Comentário de Aviso ex: A função abaixo retorna warnings para o programa, não sei como consertar,
+!  nem como a função funciona, mas ela funciona
+// Código apagado
+=end

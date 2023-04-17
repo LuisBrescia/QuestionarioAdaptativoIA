@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- * DADOS -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questionário Adaptativo</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- * Autoexplicativo -->
     <link rel="stylesheet" href="{{ url_for ('static', filename='style.css') }}">
     <script src="{{ url_for('static', filename='script.js') }}"> </script>
 </head>
 <body>
+    <!-- * HEADER -->
     <header> 
         <a class="external" href="{{ url_for('inicia') }}"><h1>Questionário adaptativo IA</h1></a>
     </header>
 
+    <!-- * MAIN -->
     <main>
+        <!-- * Formulário de resposta -->
         <form action="/problema{{questao}}" method="POST">
             <label for="resposta1"><h2>Questão {{questao}}</h2></label>
             <label for="resposta1"><h3>{{pergunta}}</h3></label>
@@ -22,38 +26,50 @@
             <input type="submit" value="Enviar">
         </form>
 
+        <!-- * Navegação pelas questões -->
         <aside>
             <a href="{{ url_for('problema', numeroQuestao = 1) }}">
-                <input type="submit" value="1" {% if questao =='1' %}class="colore"{% endif %}>
+                <input type="submit" value="1" {% if questao =='1' %}class="active"{% endif %}>
             </a>
             <a href="{{ url_for('problema', numeroQuestao = 2) }}">
-                <input type="submit" value="2" {% if questao =='2' %}class="colore"{% endif %}>
+                <input type="submit" value="2" {% if questao =='2' %}class="active"{% endif %}>
             </a>
             <a href="{{ url_for('problema', numeroQuestao = 3) }}">
-                <input type="submit" value="3" {% if questao =='3' %}class="colore"{% endif %}>
+                <input type="submit" value="3" {% if questao =='3' %}class="active"{% endif %}>
             </a>
             <a href="{{ url_for('problema', numeroQuestao = 4) }}">
-                <input type="submit" value="4" {% if questao =='4' %}class="colore"{% endif %}>
+                <input type="submit" value="4" {% if questao =='4' %}class="active"{% endif %}>
             </a>
             <a href="{{ url_for('problema', numeroQuestao = 5) }}">
-                <input type="submit" value="5" {% if questao =='5' %}class="colore"{% endif %}>
+                <input type="submit" value="5" {% if questao =='5' %}class="active"{% endif %}>
             </a>
             <a href="{{ url_for('problema', numeroQuestao = 6) }}">
-                <input type="submit" value="6" {% if questao =='6' %}class="colore"{% endif %}>
+                <input type="submit" value="6" {% if questao =='6' %}class="active"{% endif %}>
+            </a>
+            <a href="{{ url_for('problema', numeroQuestao = 7) }}">
+                <input type="submit" value="7" {% if questao =='7' %}class="active"{% endif %}>
+            </a>
+            <a href="{{ url_for('problema', numeroQuestao = 8) }}">
+                <input type="submit" value="8" {% if questao =='8' %}class="active"{% endif %}>
+            </a>
+            <a href="{{ url_for('problema', numeroQuestao = 9) }}">
+                <input type="submit" value="9" {% if questao =='9' %}class="active"{% endif %}>
+            </a>
+            <a href="{{ url_for('problema', numeroQuestao = 10) }}">
+                <input type="submit" value="10" {% if questao =='10' %}class="active"{% endif %}>
             </a>
         </aside>
         
-        
-        <h1 style="text-align: center;">
-            {{ resposta }}
-        </h1>
-        <h1 id="statusColor" style="text-align: center">{{status}}</h1>
+        <!-- > Botão de próxima questão, e questão interior -->
 
+        <!-- * Resultado da resposta -->
+        <h1 style="text-align: center;">{{ resposta }}</h1>
+        <h1 id="statusColor" style="text-align: center">{{status}}</h1>
     </main>
-        
+    
+    <!-- * FOOTER -->
     <footer>
         <h3><a class="external" href="https://github.com/LuisBrescia" target="_blank">Luis Brescia</a></h3>
     </footer>
-
 </body>
 </html>

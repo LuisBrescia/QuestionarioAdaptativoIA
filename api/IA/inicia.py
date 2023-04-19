@@ -18,7 +18,7 @@ def problema(numeroQuestao):
     else:
         respostaAluno = ''
 
-    caminhoRespostaIA = f"Respostas/resposta{numeroQuestao}.txt"
+    caminhoRespostaIA = f"api/Respostas/resposta{numeroQuestao}.txt"
     resultado, status = comparaRespostas(respostaAluno, caminhoRespostaIA)
     
     return render_template('problema.html', resposta=resultado, status=status, questao=numeroQuestao, 

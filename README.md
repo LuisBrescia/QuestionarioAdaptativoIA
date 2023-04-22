@@ -18,9 +18,15 @@ A idéia é criar/manipular uma inteligência artificial capaz de desenvolver pe
 
 |ID    | Descrição do Requisito  | Prioridade | Status: |
 |------|-----------------------------------------|----|------|
-|RF-001| Corrigir respostas dissertativas para essas perguntas. | ALTA | :white_check_mark: |
-|RF-002| Navegar entre perguntas. | ALTA | :white_check_mark: |
-|RF-003| Criar perguntas relacionadas as áreas de conhecimento propostas. | Baixa | :x: |
+|RF-01| Corrigir respostas dissertativas para essas perguntas. | Média | :white_check_mark: |
+|RF-02| Navegar entre perguntas. | Média | :white_check_mark: |
+|RF-03| Criar perguntas relacionadas as áreas de conhecimento propostas. | Baixa | :x: |
+|RF-04| Questões organizadas aleatóriamente cada vez que o questionário é carregado. | Média | :x: |
+|RF-05| Exibir questões já respondidas, e as que faltam ser respondidas. | Média | :x: |
+
+## Requisitos não funcionais
+|RNF-03| Feedback deverá ser preciso. | Alta | :x: |
+
 
 ## Instruções de Utilização:
 > python 3.10.111 instalado <br/>

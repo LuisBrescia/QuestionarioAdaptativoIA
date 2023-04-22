@@ -15,7 +15,7 @@ form {
 }
 
 aside .active {background-color: #174afb; color: #fff;}
-textarea {border: 1px solid #aaa; border-radius: 5px; padding: 5px;}
+textarea {border: 1px solid #aaa; border-radius: 5px; padding: 5px; width: 80%;}
 .mainIndex {background-color: #fff; border: none; padding: 0; width: 50%; margin: 20em auto;}
 
 a[target='_blank'], .external {
@@ -36,13 +36,14 @@ a[target='_blank'], .external {
     font-weight: bolder;
 }
 a[target='_blank']:hover, [type="submit"]:hover, .external:hover {background-color: #174afb; color: #fff; cursor: pointer;}
+.resultado {padding-bottom: 1em;}
 
 /** Header */
 header {display: flex; justify-content: center; background-color: #f0f0f0; color: #333; padding: 10px; border-bottom: 1px solid #aaa;}
 /** Main */
 main {display: flex; flex-flow: column wrap; justify-content: space-between; gap: 3em;}
 /** Aside */
-aside { display: flex; justify-content: center; gap: 1em; }
+aside { display: flex; justify-content: center; gap: 1em; flex-flow: row wrap;}
 /** Footer */
 footer {
     background-color: #f0f0f0;  
@@ -56,3 +57,11 @@ footer {
 }
 /*? Botão da pagina inicial */
 .iniciaQuestionario { width: 100%; height: 100%; font-size: xx-large; padding: 2em;}
+
+@media screen and (max-width: 768px) {
+    form {width: 90%;}
+    .mainIndex {width: 90%;}
+    footer {
+        position: relative;
+    }
+}   

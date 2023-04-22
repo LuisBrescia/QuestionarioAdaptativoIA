@@ -1,0 +1,3 @@
+a comunicação síncrona e assíncrona são dois tipos diferentes de comunicação de dados.
+a comunicação síncrona é um tipo de comunicação em que os dados são enviados em um fluxo contínuo e os dispositivos de comunicação estão sincronizados para enviar e receber dados ao mesmo tempo. já a comunicação assíncrona é um tipo de comunicação em que os dados são enviados em blocos 
+de tamanho fixo e os dispositivos de comunicação não precisam estar sincronizados no envio e recebimento de dados.

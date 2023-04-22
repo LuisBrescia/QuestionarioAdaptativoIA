@@ -1,0 +1,6 @@
+a topologia física se refere à disposição física dos componentes de rede, como cabos, dispositivos e outros equipamentos, 
+enquanto a topologia lógica se refere à forma como os dados são transmitidos entre os dispositivos de rede, 
+independentemente de sua localização física. em outras palavras, 
+a topologia física se concentra na conexão física e na localização dos dispositivos de rede, 
+enquanto a topologia lógica se concentra na forma como os dispositivos de rede se comunicam e trocam dados. 
+por exemplo, uma rede pode ter uma topologia física de estrela, mas uma topologia lógica de anel.

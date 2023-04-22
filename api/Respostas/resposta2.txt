@@ -1,1 +1,5 @@
-UMA OVELHA NÃO É UM LOBO
+as fibras ópticas monomodo e multimodo se diferem pela maneira como o núcleo da fibra é projetado e fabricado. 
+a fibra multimodo tem um núcleo maior, que permite que vários modos de luz viajem através da fibra. 
+já a fibra monomodo tem um núcleo muito menor, o que limita a propagação da luz a um único modo.
+isso resulta em uma transmissão mais rápida e com menos perda de sinal na fibra monomodo, sendo ideal para aplicações de longa distância. 
+a fibra multimodo é mais comum em redes locais, como em prédios e campus universitários.

@@ -1,0 +1,14 @@
+as topologias de rede mais comuns são a topologia em anel, estrela e barramento.
+
+topologia em anel: nesta topologia, os dispositivos são conectados em um loop fechado, formando um anel. 
+os dados são transmitidos de um dispositivo para o próximo, em uma única direção. 
+cada dispositivo atua como um repetidor para regenerar o sinal e encaminhá-lo para o próximo dispositivo. 
+se um dispositivo falha, o anel é quebrado e a rede fica inoperante.
+
+topologia em estrela: nesta topologia, todos os dispositivos são conectados a um único dispositivo central, como um hub ou switch. 
+o dispositivo central é responsável por transmitir dados de um dispositivo para outro na rede. 
+se um dispositivo falha, apenas aquele dispositivo é afetado e a rede continua operando.
+
+topologia em barramento: nesta topologia, todos os dispositivos são conectados a um único cabo, chamado de barramento. 
+os dados são transmitidos através do cabo e recebidos por todos os dispositivos na rede. 
+cada dispositivo tem um endereço único e só recebe dados destinados a ele. se o cabo falha, a rede fica inoperante.

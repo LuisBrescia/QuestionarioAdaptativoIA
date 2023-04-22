@@ -1,0 +1,6 @@
+um protocolo de comunicação de dados é um conjunto de regras e procedimentos que governam a comunicação entre dispositivos em uma rede de computadores ou sistema de comunicação. 
+ele define a forma como os dados são transmitidos, recebidos, verificados, roteados e interpretados entre diferentes dispositivos em uma rede.
+os protocolos de comunicação de dados são projetados para garantir que as informações sejam transferidas com precisão, eficiência e segurança. 
+eles são usados em redes locais (lans), redes de longa distância (wans), redes sem fio (wlans) e em muitos outros tipos de redes.
+alguns exemplos de protocolos de comunicação de dados incluem tcp/ip (transmission control protocol/internet protocol), ftp (file transfer protocol), http (hypertext transfer protocol), smtp (simple mail transfer protocol) e muitos outros. 
+cada protocolo tem sua própria função e é usado em diferentes tipos de comunicações de dados.

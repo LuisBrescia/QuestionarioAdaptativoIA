@@ -1,6 +1,8 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session
 from problema import comparaRespostas
+from seleciona_questao import selecionaQuestao
 from perguntas import perguntas
+import random
 
 # * Cria o app
 questionario = Flask(__name__, template_folder='../FrontEnd', static_folder='../FrontEnd')
@@ -8,6 +10,8 @@ questionario = Flask(__name__, template_folder='../FrontEnd', static_folder='../
 # * Rota inicial
 @questionario.route("/", methods=['GET', 'POST'])
 def inicia():
+    # > Código para zerar a lista de questões selecionadas
+    # session['selecionadas'] = []
     return render_template('index.html')
 
 # * Rota para cada questão
@@ -18,6 +22,9 @@ def problema(numeroQuestao):
     else:
         respostaAluno = ''
 
+    # > Código para gerar uma questão aleatória
+    # questao = selecionaQuestao()
+    
     caminhoRespostaIA = f"api/Respostas/resposta{numeroQuestao}.txt"
     resultado, status = comparaRespostas(respostaAluno, caminhoRespostaIA)
     

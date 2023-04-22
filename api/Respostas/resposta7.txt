@@ -1,0 +1,11 @@
+os componentes básicos de um sistema de comunicação de dados incluem:
+
+emissor: dispositivo que envia a informação ou mensagem;
+receptor: dispositivo que recebe a informação ou mensagem;
+canal: meio físico (ou não) pelo qual a informação é transmitida;
+mensagem: a informação a ser transmitida;
+protocolo: conjunto de regras que definem como a informação será transmitida;
+codificação: processo de transformação da informação em sinais adequados para transmissão;
+decodificação: processo de reconstrução da informação original a partir dos sinais recebidos;
+controle de erros: processo de detecção e correção de erros que possam ocorrer durante a transmissão da informação;
+gerenciamento: processos que controlam a utilização do canal e gerenciam os recursos disponíveis para a transmissão da informação.

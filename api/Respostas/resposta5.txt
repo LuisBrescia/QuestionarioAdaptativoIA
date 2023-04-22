@@ -1,0 +1,8 @@
+sistema de cabeamento estruturado é uma infraestrutura padronizada de cabos,
+conectores e dispositivos utilizada para transmitir dados, 
+voz e outros tipos de informações de um ponto a outro em uma rede de computadores. 
+é composto por elementos de hardware, como cabos de cobre, fibra óptica, conectores, painéis de patch, 
+racks e equipamentos de rede, além de elementos de software, como protocolos de comunicação e sistemas de gerenciamento de rede. 
+o objetivo do sistema de cabeamento estruturado é fornecer uma rede de alta velocidade, 
+flexível e escalável que possa suportar diversas aplicações, 
+permitindo a expansão e a alteração da infraestrutura de forma eficiente e econômica.

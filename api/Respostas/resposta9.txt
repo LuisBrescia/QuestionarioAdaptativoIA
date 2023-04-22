@@ -1,0 +1,15 @@
+tanto o hub quanto o switch são equipamentos utilizados em sistemas de rede para conectar dispositivos em uma rede de computadores.
+no entanto, há uma diferença fundamental entre eles.
+
+um hub é um dispositivo simples que funciona como um multiplicador de portas, 
+permitindo que vários dispositivos se conectem a uma única porta de rede. 
+quando um dispositivo envia dados para o hub, o hub envia esses dados para todas as portas, incluindo a porta de destino.
+ isso significa que todos os dispositivos conectados ao hub recebem os dados, mesmo que eles não sejam o destinatário pretendido.
+  esse método de compartilhamento de largura de banda é chamado de "broadcasting", 
+o que pode levar a um congestionamento na rede e diminuir a eficiência da transmissão de dados.
+
+por outro lado, um switch é um dispositivo inteligente que examina os dados de entrada e envia os dados apenas para a porta de saída relevante, 
+com base no endereço mac do dispositivo de destino. 
+isso significa que os dados só são enviados para o dispositivo correto e não para todos os dispositivos conectados, 
+o que melhora significativamente o desempenho e a eficiência da rede. 
+além disso, um switch tem recursos de gerenciamento e segurança que permitem ao administrador de rede controlar o acesso de usuários e dispositivos à rede.

@@ -25,6 +25,8 @@ A idéia é criar/manipular uma inteligência artificial capaz de desenvolver pe
 |RF-05| Exibir questões já respondidas, e as que faltam ser respondidas. | Média | :x: |
 
 ## Requisitos não funcionais
+|ID    | Descrição do Requisito  | Prioridade | Status: |
+|------|-----------------------------------------|----|------|
 |RNF-03| Feedback deverá ser preciso. | Alta | :x: |
 
 

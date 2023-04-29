@@ -17,11 +17,11 @@
     </header>
 
     <!-- * MAIN -->
-    <main>
+    <main class="questionario">
         <!-- * Formulário de resposta -->
         <form action="/problema{{questao}}" method="POST">
             <label for="resposta1"><h2>QUESTÃO {{questao}}</h2></label>
-            <label for="resposta1"><h3>{{pergunta}}</h3></label>
+            <label for="resposta1" style="text-align: center;"><h3>{{pergunta}}</h3></label>
             <textarea name = "respostaAluno" id="respostaAluno" rows="5" cols="50">{{respostaAluno}}</textarea>
             <input type="submit" value="Enviar">
         </form>
@@ -64,6 +64,7 @@
 
         <!-- * Resultado da resposta -->
         <div class="resultado">
+            <!-- <input type="submit" value="Entregar"> -->
             <h1 style="text-align: center;">{{ resposta }}</h1>
             <h1 id="statusColor" style="text-align: center">{{status}}</h1>
         </div>

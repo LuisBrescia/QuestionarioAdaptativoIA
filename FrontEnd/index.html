@@ -17,10 +17,18 @@
     </header>
 
     <!-- * MAIN -->     
-    <main class="mainIndex">
-        <a href="{{ url_for('problema', numeroQuestao=1) }}">
-            <input type="submit" class="iniciaQuestionario" value="Clique para iniciar o questionário">
-        </a>
+    <main class="mainIndex" style="display: flex; justify-content: center;">
+        <ul>
+            <li><h2>Matrícula</h2></li>
+            <li><input type="text" placeholder="Matrícula"></li>
+            <li><h2 style="border-top: 2px solid #062846;">Senha</h2></li>
+            <li><input type="password" placeholder="Senha"></li>
+            <li>
+                <a href="{{ url_for('problema', numeroQuestao = 1)}}">
+                    <button class="btn-principal">INICIAR</button>
+                </a>
+            </li>
+        </ul>
     </main>
 
     <!-- > Botão para indicar quais matérias o aluno deseja estudar -->

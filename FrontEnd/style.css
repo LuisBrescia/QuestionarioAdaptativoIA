@@ -1,6 +1,7 @@
 * {margin: 0; padding: 0; list-style: none; font-weight: 900;}
 
-body {font-family: sans-serif; font-size: 12px; color: #333; background-color: #F1F6F9;}
+body {font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 12px; color: #062846; background-color: #F1F6F9;}
+a {color: #F1F6F9; text-decoration: none; }
 
 form {
     display: flex; justify-content: center;  
@@ -8,47 +9,56 @@ form {
     background-color: #F1F6F9;
     width: 50%;
     margin: 2em auto;
-    border: 2px solid #212A3E;
-    flex-flow: column nowrap; gap: 5em;
-    padding: 1em; 
-    background: linear-gradient(#F1F6F9, #9BA4B5);    
+    border: 2px solid #062846;
+    flex-flow: column nowrap; gap: 2em;
+    padding-bottom: 2em;
 }
-
-aside .active {background-color:#394867; color: #F1F6F9;}
-textarea {border: 1px solid #aaa; border-radius: 5px; padding: 5px; width: 80%;}
-.mainIndex {background-color: #F1F6F9; border: none; padding: 0; width: 50%; margin: 20em auto;}
-
-a[target='_blank'], .external {
-    text-decoration: none; 
-    color: #F1F6F9; 
+.questionario form label:first-child {
+    background: linear-gradient(#00386A, #062846); color: #F1F6F9; border-bottom: 2px solid #062846;
+    width: 100%; padding: 1em 0; margin: 0; 
 }
+.questionario form label h2 { margin-left: 1em; }
+aside .active {background: linear-gradient(#00386A, #062846); color: #F1F6F9;}
+textarea {border: 1px solid #00386A; padding: 5px; width: 80%;}
+a[target='_blank'], .external { text-decoration: none;  color: #F1F6F9; }
 [type="submit"] {
     background-color: #F1F6F9; 
     width: 5em; 
-    height: 30px; 
-    border: 2px solid #212A3E;  
+    border: 2px solid #062846;  
     padding: 5px;
-    color: #212A3E;
+    color: #062846;
 }
+input:focus, textarea:focus {outline: none;}
 a[target='_blank']:hover, [type="submit"]:hover, .external:hover {
-background-color: #212A3E; color: #F1F6F9; cursor: pointer;}
-.resultado {padding-bottom: 3em;}
+    background: linear-gradient(#062846, #062846); color: #F1F6F9; cursor: pointer;}
 
 /** Header */
-header {display: flex; background-color: #394867; color: #F1F6F9; padding: 10px; border-bottom: 1px solid #aaa; padding: 0;}
+header { display: flex; background: linear-gradient(#00386A, #062846); color: #F1F6F9; padding: 10px; border-bottom: 2px solid #062846; padding: 0; }
 header h1 {padding: 1em;}
 /** Main */
-main {display: flex; flex-flow: column wrap; justify-content: space-between; gap: 3em;}
+.questionario { display: flex; flex-flow: column wrap; justify-content: space-between; gap: 3em; }
 /** Aside */
-aside { display: flex; justify-content: center; gap: 1em; flex-flow: row wrap;}
+aside { display: flex; justify-content: center; gap: 1em; flex-flow: row wrap; }
+.resultado {padding-bottom: 3em; display: flex; flex-flow: column nowrap; gap: 1em;}
+.resultado [type=submit], [value="Enviar"] {background: linear-gradient(#00386A, #062846); color: #F1F6F9;}
+.resultado [type=submit]:hover, [value="Enviar"]:hover {background: linear-gradient(#062846, #062846)}
+.resultado [type=submit] { margin: 0 auto; width: 100%; width: fit-content; padding: 0.5em 2em;}
 /** Footer */
 footer {
-    background-color: #394867;  
+    background-color: #00386A;  
     text-align: center;
-    border-top: 1px solid #212A3E;
+    border-top: 1px solid #062846;
 }
 /*? Botão da pagina inicial */
-.iniciaQuestionario { width: 100%; height: 100%; font-size: xx-large; padding: 2em;}
+.mainIndex {display: flex; justify-content: center; align-items: flex-end; height: 50vh; margin: 0 auto;}
+.btn-principal {color: #F1F6F9; background: linear-gradient(#00386A, #062846); display: flex; justify-content: center; align-items: center; 
+    border: none; border-top: 2px solid #062846; }
+.btn-principal:hover {background: linear-gradient(#062846, #062846); color: #F1F6F9; cursor: pointer;}
+
+.mainIndex ul { width: 40%; display: flex; flex-flow: column nowrap; text-align: center; border: 2px solid #062846; background-color: #062846;}
+.mainIndex ul input {width: 95%; text-align: center; background-color: #F1F6F9; border: none; margin: none; padding: .5em 0;}
+.mainIndex button {width: 100%; padding: .5em; font-size: 1em;}
+.mainIndex ul h2 {background: linear-gradient(#00386A, #062846); color: #F1F6F9; border-bottom: 2px solid #062846; font-size: 1.5em; padding: .5em;}
 
 @media screen and (max-width: 768px) {
     form {width: 90%;}

@@ -14,6 +14,7 @@
     <!-- * HEADER -->
     <header> 
         <a class="external" href="{{ url_for('inicia') }}"><h1>Questionário adaptativo IA</h1></a>
+        <img src="{{ url_for('static', filename='Imagens/Logo_CEFET-MG.png') }}" height="60px" alt="Logo_CEFET-MG">
     </header>
 
     <!-- * MAIN -->     
@@ -21,7 +22,7 @@
         <ul>
             <li><h2>Matrícula</h2></li>
             <li><input type="text" placeholder="Matrícula"></li>
-            <li><h2 style="border-top: 2px solid #062846;">Senha</h2></li>
+            <li><h2 style="border-top: 2px solid #062846; background: linear-gradient(#00386A, #00386A);">Senha</h2></li>
             <li><input type="password" placeholder="Senha"></li>
             <li>
                 <a href="{{ url_for('problema', numeroQuestao = 1)}}">

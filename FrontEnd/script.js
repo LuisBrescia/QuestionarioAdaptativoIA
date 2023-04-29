@@ -8,4 +8,22 @@ window.onload = function() {
         document.getElementById("statusColor").style.color = "#4040ff";
     }       
 }
-  
+
+var respostas = [];
+ 
+if (request.method == 'POST') {
+    var respostaAluno = request.form['respostaAluno'];
+    respostas.push(respostaAluno);
+    localStorage.setItem('respostas', JSON.stringify(respostas));
+} else {
+    var respostaAluno = '';
+}
+
+window.onload = function() {
+    if (localStorage.getItem('respostas')) {
+        respostas = JSON.parse(localStorage.getItem('respostas'));
+        var ultimaResposta = respostas[respostas.length - 1];
+        document.getElementById('respostaAluno').value = ultimaResposta;
+    }
+}
+

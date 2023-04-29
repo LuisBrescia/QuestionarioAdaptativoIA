@@ -19,8 +19,10 @@ def inicia():
 def problema(numeroQuestao):
     if request.method == 'POST':
         respostaAluno = request.form['respostaAluno']
+        script = f"localStorage.setItem('resposta{numeroQuestao}', '{respostaAluno}');"
     else:
         respostaAluno = ''
+        script = ''
 
     # > Código para gerar uma questão aleatória
     # questao = selecionaQuestao()

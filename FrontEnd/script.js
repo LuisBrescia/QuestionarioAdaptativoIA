@@ -1,5 +1,5 @@
 // ? Caso seja aprovado, o texto será verde, caso contrário, será vermelho.
-window.onload = function() {
+window.onload = () {
     if (document.getElementById("statusColor").textContent === "APROVADO") {
         document.getElementById("statusColor").style.color = "#40FF40";
     } else if (document.getElementById("statusColor").textContent === "REPROVADO") {

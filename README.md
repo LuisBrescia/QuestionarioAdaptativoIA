@@ -27,8 +27,8 @@ A idéia é criar/manipular uma inteligência artificial capaz de desenvolver pe
 ## Requisitos não funcionais
 |ID    | Descrição do Requisito  | Prioridade | Status: |
 |------|-----------------------------------------|----|------|
-|RNF-03| Feedback deverá ser preciso. | Alta | :x: |
-
+|RNF-01| Feedback deverá ser preciso. | Alta | :x: |
+|RNF-02| Questões não podem se repetir dentro de um mesmo questionário. | Alta | :x: |
 
 ## Instruções de Utilização:
 > python 3.10.111 instalado <br/>

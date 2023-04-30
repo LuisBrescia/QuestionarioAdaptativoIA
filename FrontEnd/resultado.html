@@ -18,16 +18,16 @@
     <main class="mainIndex feedback" style="display: flex; justify-content: center;">
         <ul>
             <li><h2>Feedback</h2></li>
-            <li id="q1" class="notaQuestao">1</li>
-            <li id="q2" class="notaQuestao">2</li>
-            <li id="q3" class="notaQuestao">3</li>
-            <li id="q4" class="notaQuestao">4</li>
-            <li id="q5" class="notaQuestao">5</li>
-            <li id="q6" class="notaQuestao">6</li>
-            <li id="q7" class="notaQuestao">7</li>
-            <li id="q8" class="notaQuestao">8</li>
-            <li id="q9" class="notaQuestao">9</li>
-            <li id="q10" class="notaQuestao">10</li>
+            <li id="q1" class="notaQuestao"></li>
+            <li id="q2" class="notaQuestao"></li>
+            <li id="q3" class="notaQuestao"></li>
+            <li id="q4" class="notaQuestao"></li>
+            <li id="q5" class="notaQuestao"></li>
+            <li id="q6" class="notaQuestao"></li>
+            <li id="q7" class="notaQuestao"></li>
+            <li id="q8" class="notaQuestao"></li>
+            <li id="q9" class="notaQuestao"></li>
+            <li id="q10" class="notaQuestao"></li>
             <li>
                 <a href="{{ url_for('inicia')}}">
                     <button class="btn-principal">HOME</button>
@@ -44,22 +44,19 @@
     </footer> -->
     
     <script>
-        // document.getElementById('q1').innerHTML  = "Q1: "  + localStorage.getItem('resposta1');
-        // document.getElementById('q2').innerHTML  = "Q2: "  + localStorage.getItem('resposta2');
-        // document.getElementById('q3').innerHTML  = "Q3: "  + localStorage.getItem('resposta3');
-        // document.getElementById('q4').innerHTML  = "Q4: "  + localStorage.getItem('resposta4');
-        // document.getElementById('q5').innerHTML  = "Q5: "  + localStorage.getItem('resposta5');
-        // document.getElementById('q6').innerHTML  = "Q6: "  + localStorage.getItem('resposta6');
-        // document.getElementById('q7').innerHTML  = "Q7: "  + localStorage.getItem('resposta7');
-        // document.getElementById('q8').innerHTML  = "Q8: "  + localStorage.getItem('resposta8');
-        // document.getElementById('q9').innerHTML  = "Q9: "  + localStorage.getItem('resposta9');
-        // document.getElementById('q10').innerHTML = "Q10: " + localStorage.getItem('resposta10');
         for (let i = 1; i <= 10; i++) {
             const id = `q${i}`;
-            const resposta = localStorage.getItem(`resposta${i}`);
+            const resposta = localStorage.getItem(`status${i}`);
             document.getElementById(id).innerHTML = `Q${i}: ${resposta}`;
-        }
 
+            if (document.getElementById(id).textContent ===`Q${i}: APROVADO`) {
+                document.getElementById(id).style.color = "#40FF40";
+            } else if (document.getElementById(id).textContent === `Q${i}: REPROVADO`) {
+                document.getElementById(id).style.color = "#ff4040";
+            } else {
+                document.getElementById(id).style.color = "#00386A";
+            }
+        }
     </script>
 </body>
 </html>

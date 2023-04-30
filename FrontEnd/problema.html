@@ -79,6 +79,9 @@
             var respostaAluno = document.getElementById('respostaAluno').value;
             localStorage.setItem('resposta{{questao}}', respostaAluno);
         }
+        if ('{{status}}' != '') {
+            localStorage.setItem('status{{questao}}', '{{status}}');
+        }
         
         document.getElementById('respostaAluno').value = localStorage.getItem('resposta{{questao}}');
 

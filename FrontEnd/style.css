@@ -61,7 +61,7 @@ footer {
 .mainIndex button {width: 100%; padding: 1em; font-size: 1.2em;}
 .mainIndex ul h2 {background: linear-gradient(#062846, #00386A); color: #F1F6F9; border-bottom: 2px solid #062846; font-size: 1.5em; padding: .5em;}
 
-.feedback ul {display:flex; width: 60%;}
+.feedback ul {display:flex; width: 60%; }
 .notaQuestao {font-size: 1.2em; border-bottom: #062846 2px solid; display: flex; padding: 0.5em;}
 .feedback ul li:nth-child(11) {border: none;}
 

@@ -1,17 +1,21 @@
 from flask import Flask, render_template, request, session
 from problema import comparaRespostas
-from seleciona_questao import selecionaQuestao
 from perguntas import perguntas
 import random
 
 # * Cria o app
 questionario = Flask(__name__, template_folder='../FrontEnd', static_folder='../FrontEnd')
 
+# * Vetor com as questões
+vetorQuestoes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
 # * Rota inicial
 @questionario.route("/", methods=['GET', 'POST'])
 def inicia():
-    # > Código para zerar a lista de questões selecionadas
-    # session['selecionadas'] = []
+
+    # ? Código para bagunçar a ordem das questões
+    random.shuffle(vetorQuestoes)
+
     return render_template('index.html')
 
 # * Rota para cada questão
@@ -19,20 +23,16 @@ def inicia():
 def problema(numeroQuestao):
     if request.method == 'POST':
         respostaAluno = request.form['respostaAluno']
-        script = f"localStorage.setItem('resposta{numeroQuestao}', '{respostaAluno}');"
     else:
         respostaAluno = ''
 
-    # > Código para gerar uma questão aleatória
-    # questao = selecionaQuestao()
-    
-    caminhoRespostaIA = f"Respostas/resposta{numeroQuestao}.txt"
+    caminhoRespostaIA = f"Respostas/resposta{vetorQuestoes[int(numeroQuestao)-1]}.txt"
     resultado, status = comparaRespostas(respostaAluno, caminhoRespostaIA)
     
     return render_template('problema.html', resposta=resultado, status=status, questao=numeroQuestao, 
-    respostaAluno=respostaAluno, pergunta=perguntas[f'pergunta{numeroQuestao}'])
+    respostaAluno=respostaAluno, pergunta=perguntas[f'pergunta{vetorQuestoes[int(numeroQuestao)-1]}'])
 
-# > Rota para a página de resultados
+# * Rota para a página de resultados
 @questionario.route("/resultados", methods=['GET'])
 def resultado():    
     return render_template('resultado.html')

@@ -17,7 +17,7 @@
     <!-- * MAIN -->     
     <main class="mainIndex feedback" style="display: flex; justify-content: center;">
         <ul>
-            <li><h2>Feedback</h2></li>
+            <li><h2>Pontos: <span id="pontos"></span>/10</h2></li>
             <li id="q1" class="notaQuestao"></li>
             <li id="q2" class="notaQuestao"></li>
             <li id="q3" class="notaQuestao"></li>
@@ -44,6 +44,8 @@
     </footer> -->
     
     <script>
+        var pontos = 0;
+
         for (let i = 1; i <= 10; i++) {
             const id = `q${i}`;
             const resposta = localStorage.getItem(`status${i}`);
@@ -51,12 +53,15 @@
 
             if (document.getElementById(id).textContent ===`Q${i}: APROVADO`) {
                 document.getElementById(id).style.color = "#40FF40";
+                pontos++;
             } else if (document.getElementById(id).textContent === `Q${i}: REPROVADO`) {
                 document.getElementById(id).style.color = "#ff4040";
             } else {
                 document.getElementById(id).style.color = "#00386A";
             }
         }
+
+        document.getElementById("pontos").innerHTML = pontos;
     </script>
 </body>
 </html>

@@ -1,12 +1,12 @@
 * {margin: 0; padding: 0; list-style: none; font-weight: 900;}
 
-body {font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 12px; color: #062846; background-color: #F1F6F9;}
-a {color: #F1F6F9; text-decoration: none; }
+body {font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 12px; color: #062846; background-color: aliceblue;}
+a {color: aliceblue; text-decoration: none; }
 
 form {
     display: flex; justify-content: center;  
     height: 60%; align-items: center;
-    background-color: #F1F6F9;
+    background-color: aliceblue;
     width: 50%;
     margin: 2em auto;
     border: 2px solid #062846;
@@ -14,15 +14,15 @@ form {
     padding-bottom: 2em;
 }
 .questionario form label:first-child {
-    background: linear-gradient(#00386A, #062846); color: #F1F6F9; border-bottom: 2px solid #062846;
+    background: linear-gradient(#00386A, #062846); color: aliceblue; border-bottom: 2px solid #062846;
     width: 100%; padding: 1em 0; margin: 0; 
 }
 .questionario form label h2 { margin-left: 1em; }
-aside .active {background: linear-gradient(#00386A, #062846); color: #F1F6F9;}
+aside .active {background: linear-gradient(#00386A, #062846); color: aliceblue;}
 textarea {border: 1px solid #00386A; padding: 5px; width: 80%;}
-a[target='_blank'], .external { text-decoration: none;  color: #F1F6F9; }
+a[target='_blank'], .external { text-decoration: none;  color: aliceblue; }
 [type="submit"] {
-    background-color: #F1F6F9; 
+    background-color: aliceblue; 
     width: 5em; 
     border: 2px solid #062846;  
     padding: 5px;
@@ -30,10 +30,10 @@ a[target='_blank'], .external { text-decoration: none;  color: #F1F6F9; }
 }
 input:focus, textarea:focus {outline: none;}
 a[target='_blank']:hover, [type="submit"]:hover, .external:hover {
-    background: linear-gradient(#062846, #062846); color: #F1F6F9; cursor: pointer;}
+    background: linear-gradient(#062846, #062846); color: aliceblue; cursor: pointer;}
 
 /** Header */
-header {display: flex; background: linear-gradient(#00386A, #062846); color: #F1F6F9; border-bottom: 2px solid #062846; padding: 0; justify-content: space-between; align-items: center;}
+header {display: flex; background: linear-gradient(#00386A, #062846); color: aliceblue; border-bottom: 2px solid #062846; padding: 0; justify-content: space-between; align-items: center;}
 header h1 {padding: 1em;}
 img {padding: 0 1em; margin-right: 5em; filter: brightness(0) invert(1);}
 /** Main */
@@ -41,7 +41,7 @@ img {padding: 0 1em; margin-right: 5em; filter: brightness(0) invert(1);}
 /** Aside */
 aside { display: flex; justify-content: center; gap: 1em; flex-flow: row wrap; }
 .resultado {padding-bottom: 3em; display: flex; flex-flow: column nowrap; gap: 1em;}
-.resultado [type=submit], [value="Enviar"] {background: linear-gradient(#00386A, #062846); color: #F1F6F9;}
+.resultado [type=submit], [value="Enviar"] {background: linear-gradient(#00386A, #062846); color: aliceblue;}
 .resultado [type=submit]:hover, [value="Enviar"]:hover {background: linear-gradient(#062846, #062846)}
 .resultado [type=submit] { margin: 0 auto; width: 100%; width: fit-content; padding: 0.5em 2em;}
 /** Footer */
@@ -52,14 +52,14 @@ footer {
 }
 /*? Botão da pagina inicial */
 .mainIndex {display: flex; justify-content: center; align-items: flex-end; margin: 0 auto; margin-top: 5em;}
-.btn-principal {color: #F1F6F9; background: linear-gradient(#00386A, #062846); display: flex; justify-content: center; align-items: center; 
+.btn-principal {color: aliceblue; background: linear-gradient(#00386A, #062846); display: flex; justify-content: center; align-items: center; 
     border: none; border-top: 2px solid #062846; }
-.btn-principal:hover {background: linear-gradient(#062846, #062846); color: #F1F6F9; cursor: pointer;}
+.btn-principal:hover {background: linear-gradient(#062846, #062846); color: aliceblue; cursor: pointer;}
 
-.mainIndex ul { width: 40%; display: flex; flex-flow: column nowrap; text-align: center; border: 2px solid #062846; background-color: #F1F6F9;}
-.mainIndex ul input {width: 95%; text-align: center; background-color: #F1F6F9; border: none; margin: none; padding: 2em 0;}
+.mainIndex ul { width: 40%; display: flex; flex-flow: column nowrap; text-align: center; border: 2px solid #062846; background-color: aliceblue;}
+.mainIndex ul input {width: 95%; text-align: center; background-color: aliceblue; border: none; margin: none; padding: 2em 0;}
 .mainIndex button {width: 100%; padding: 1em; font-size: 1.2em;}
-.mainIndex ul h2 {background: linear-gradient(#062846, #00386A); color: #F1F6F9; border-bottom: 2px solid #062846; font-size: 1.5em; padding: .5em;}
+.mainIndex ul h2 {background: linear-gradient(#062846, #00386A); color: aliceblue; border-bottom: 2px solid #062846; font-size: 1.5em; padding: .5em;}
 
 .feedback ul {display:flex; width: 60%; }
 .notaQuestao {font-size: 1.2em; border-bottom: #062846 2px solid; display: flex; padding: 0.5em;}

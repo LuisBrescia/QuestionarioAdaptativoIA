@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário Adaptativo</title>
+    <link rel="stylesheet" href="{{ url_for ('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- * HEADER -->
+    <header> 
+        <a class="external" href="{{ url_for('inicia') }}"><h1>Questionário adaptativo IA</h1></a>
+        <img src="{{ url_for('static', filename='Imagens/Logo_CEFET-MG.png') }}" height="60px" alt="Logo_CEFET-MG">
+    </header>
+
+    <!-- * MAIN -->     
+    <main class="mainIndex feedback" style="display: flex; justify-content: center;">
+        <ul>
+            <li><h2>Feedback</h2></li>
+            <li id="q1" class="notaQuestao">1</li>
+            <li id="q2" class="notaQuestao">2</li>
+            <li id="q3" class="notaQuestao">3</li>
+            <li id="q4" class="notaQuestao">4</li>
+            <li id="q5" class="notaQuestao">5</li>
+            <li id="q6" class="notaQuestao">6</li>
+            <li id="q7" class="notaQuestao">7</li>
+            <li id="q8" class="notaQuestao">8</li>
+            <li id="q9" class="notaQuestao">9</li>
+            <li id="q10" class="notaQuestao">10</li>
+            <li>
+                <a href="{{ url_for('inicia')}}">
+                    <button class="btn-principal">HOME</button>
+                </a>
+            </li>
+        </ul>
+    </main>
+
+    <!-- > Botão para indicar quais matérias o aluno deseja estudar -->
+
+    <!-- * FOOTER -->
+    <!-- <footer>
+        <h3><a href="https://github.com/LuisBrescia" target="_blank">Luis Brescia</a></h3>
+    </footer> -->
+    
+    <script>
+        // document.getElementById('q1').innerHTML  = "Q1: "  + localStorage.getItem('resposta1');
+        // document.getElementById('q2').innerHTML  = "Q2: "  + localStorage.getItem('resposta2');
+        // document.getElementById('q3').innerHTML  = "Q3: "  + localStorage.getItem('resposta3');
+        // document.getElementById('q4').innerHTML  = "Q4: "  + localStorage.getItem('resposta4');
+        // document.getElementById('q5').innerHTML  = "Q5: "  + localStorage.getItem('resposta5');
+        // document.getElementById('q6').innerHTML  = "Q6: "  + localStorage.getItem('resposta6');
+        // document.getElementById('q7').innerHTML  = "Q7: "  + localStorage.getItem('resposta7');
+        // document.getElementById('q8').innerHTML  = "Q8: "  + localStorage.getItem('resposta8');
+        // document.getElementById('q9').innerHTML  = "Q9: "  + localStorage.getItem('resposta9');
+        // document.getElementById('q10').innerHTML = "Q10: " + localStorage.getItem('resposta10');
+        for (let i = 1; i <= 10; i++) {
+            const id = `q${i}`;
+            const resposta = localStorage.getItem(`resposta${i}`);
+            document.getElementById(id).innerHTML = `Q${i}: ${resposta}`;
+        }
+
+    </script>
+</body>
+</html>

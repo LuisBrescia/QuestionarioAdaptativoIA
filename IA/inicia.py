@@ -33,6 +33,10 @@ def problema(numeroQuestao):
     respostaAluno=respostaAluno, pergunta=perguntas[f'pergunta{numeroQuestao}'])
 
 # > Rota para a página de resultados
+@questionario.route("/resultados", methods=['GET'])
+def resultado():    
+    return render_template('resultado.html')
+
 
 # * Caso o arquivo seja executado diretamente
 if __name__ == '__main__':

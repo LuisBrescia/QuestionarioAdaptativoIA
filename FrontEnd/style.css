@@ -51,7 +51,7 @@ footer {
     border-top: 1px solid #062846;
 }
 /*? Botão da pagina inicial */
-.mainIndex {display: flex; justify-content: center; align-items: flex-end; height: 50vh; margin: 0 auto;}
+.mainIndex {display: flex; justify-content: center; align-items: flex-end; margin: 0 auto; margin-top: 5em;}
 .btn-principal {color: #F1F6F9; background: linear-gradient(#00386A, #062846); display: flex; justify-content: center; align-items: center; 
     border: none; border-top: 2px solid #062846; }
 .btn-principal:hover {background: linear-gradient(#062846, #062846); color: #F1F6F9; cursor: pointer;}
@@ -60,6 +60,10 @@ footer {
 .mainIndex ul input {width: 95%; text-align: center; background-color: #F1F6F9; border: none; margin: none; padding: 2em 0;}
 .mainIndex button {width: 100%; padding: 1em; font-size: 1.2em;}
 .mainIndex ul h2 {background: linear-gradient(#062846, #00386A); color: #F1F6F9; border-bottom: 2px solid #062846; font-size: 1.5em; padding: .5em;}
+
+.feedback ul {display:flex; width: 60%;}
+.notaQuestao {font-size: 1.2em; border-bottom: #062846 2px solid; display: flex; padding: 0.5em;}
+.feedback ul li:nth-child(11) {border: none;}
 
 @media screen and (max-width: 768px) {
     form {width: 90%;}

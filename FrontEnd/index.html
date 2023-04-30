@@ -38,16 +38,9 @@
     <!-- * Sempre que a página inicial for carregada, o Local Storage será limpo -->
     <script>
         localStorage.clear(); 
-        localStorage.setItem('resposta1', "");
-        localStorage.setItem('resposta2', "");
-        localStorage.setItem('resposta3', "");
-        localStorage.setItem('resposta4', "");
-        localStorage.setItem('resposta5', "");
-        localStorage.setItem('resposta6', "");
-        localStorage.setItem('resposta7', "");
-        localStorage.setItem('resposta8', "");
-        localStorage.setItem('resposta9', "");
-        localStorage.setItem('resposta10', "");
+        for (let i = 1; i <= 10; i++) {
+            localStorage.setItem(`resposta${i}`, "");
+        }
     </script>
 </body>
 </html>

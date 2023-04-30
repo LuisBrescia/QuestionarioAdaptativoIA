@@ -63,9 +63,9 @@
 
         <!-- * Resultado da resposta -->
         <div class="resultado">
-            <!-- <input type="submit" value="Entregar"> -->
             <h1 style="text-align: center;">{{ resposta }}</h1>
             <h1 id="statusColor" style="text-align: center">{{status}}</h1>
+            <a style="margin: 0 auto; "href="{{ url_for('resultado') }}"><input type="submit" value="Entregar Questionário"></a>
         </div>
     </main>
     
@@ -82,8 +82,7 @@
         
         document.getElementById('respostaAluno').value = localStorage.getItem('resposta{{questao}}');
 
-        // Pegar o value de cada input do aside
-        var inputs = document.querySelectorAll('aside input');
+        //<!--> Questões já enviadas deverão ser desabilitadas
     </script>
 </body>
 </html>

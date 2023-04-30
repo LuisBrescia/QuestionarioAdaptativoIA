@@ -72,3 +72,13 @@ footer {
     header {justify-content: center;}
     img {display: none;}
 }   
+
+#demo {
+    font-size: 2em;
+    color: #ff4040;
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 0em;
+}

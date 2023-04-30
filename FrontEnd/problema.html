@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- * DADOS -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questionário Adaptativo</title>
-    <!-- * Autoexplicativo -->
     <link rel="stylesheet" href="{{ url_for ('static', filename='style.css') }}">
     <script src="{{ url_for('static', filename='script.js') }}"> </script>
 </head>
@@ -81,11 +79,11 @@
             var respostaAluno = document.getElementById('respostaAluno').value;
             localStorage.setItem('resposta{{questao}}', respostaAluno);
         }
+        
+        document.getElementById('respostaAluno').value = localStorage.getItem('resposta{{questao}}');
 
-        var respostasUsuario = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-        console.log(respostasUsuario['{{questao}}' - 1])
-        respostasUsuario['{{questao}}' - 1] = localStorage.getItem('resposta{{questao}}');
-        document.getElementById('respostaAluno').value = respostasUsuario['{{questao}}' - 1];
+        // Pegar o value de cada input do aside
+        var inputs = document.querySelectorAll('aside input');
     </script>
 </body>
 </html>

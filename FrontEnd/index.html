@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- * DADOS -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questionário Adaptativo</title>
-    <!-- * Autoexplicativo -->
     <link rel="stylesheet" href="{{ url_for ('static', filename='style.css') }}">
-    <script src="{{ url_for('static', filename='script.js') }}"> </script>
 </head>
 <body>
     <!-- * HEADER -->
@@ -39,6 +36,18 @@
         <h3><a href="https://github.com/LuisBrescia" target="_blank">Luis Brescia</a></h3>
     </footer> -->
     <!-- * Sempre que a página inicial for carregada, o Local Storage será limpo -->
-    <script> localStorage.clear(); </script>
+    <script>
+        localStorage.clear(); 
+        localStorage.setItem('resposta1', "");
+        localStorage.setItem('resposta2', "");
+        localStorage.setItem('resposta3', "");
+        localStorage.setItem('resposta4', "");
+        localStorage.setItem('resposta5', "");
+        localStorage.setItem('resposta6', "");
+        localStorage.setItem('resposta7', "");
+        localStorage.setItem('resposta8', "");
+        localStorage.setItem('resposta9', "");
+        localStorage.setItem('resposta10', "");
+    </script>
 </body>
 </html>

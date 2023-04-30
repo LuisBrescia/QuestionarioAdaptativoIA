@@ -35,7 +35,7 @@ a[target='_blank']:hover, [type="submit"]:hover, .external:hover {
 /** Header */
 header {display: flex; background: linear-gradient(#00386A, #062846); color: #F1F6F9; border-bottom: 2px solid #062846; padding: 0; justify-content: space-between; align-items: center;}
 header h1 {padding: 1em;}
-img {padding: 0 1em; margin-right: 5em;}
+img {padding: 0 1em; margin-right: 5em; filter: brightness(0) invert(1);}
 /** Main */
 .questionario { display: flex; flex-flow: column wrap; justify-content: space-between; gap: 3em; }
 /** Aside */

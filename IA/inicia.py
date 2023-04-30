@@ -22,7 +22,6 @@ def problema(numeroQuestao):
         script = f"localStorage.setItem('resposta{numeroQuestao}', '{respostaAluno}');"
     else:
         respostaAluno = ''
-        script = ''
 
     # > Código para gerar uma questão aleatória
     # questao = selecionaQuestao()
@@ -31,7 +30,7 @@ def problema(numeroQuestao):
     resultado, status = comparaRespostas(respostaAluno, caminhoRespostaIA)
     
     return render_template('problema.html', resposta=resultado, status=status, questao=numeroQuestao, 
-    respostaAluno = respostaAluno, pergunta = perguntas[f'pergunta{numeroQuestao}'])
+    respostaAluno=respostaAluno, pergunta=perguntas[f'pergunta{numeroQuestao}'])
 
 # > Rota para a página de resultados
 

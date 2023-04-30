@@ -20,10 +20,10 @@
     <!-- * MAIN -->
     <main class="questionario">
         <!-- * Formulário de resposta -->
-        <form action="/problema{{questao}}" method="POST">
+        <form action="/problema{{questao}}" method="POST" onsubmit="salvaResposta()">
             <label for="resposta1"><h2>QUESTÃO {{questao}}</h2></label>
             <label for="resposta1" style="text-align: center;"><h3>{{pergunta}}</h3></label>
-            <textarea name = "respostaAluno" id="respostaAluno" rows="5" cols="50">{{respostaAluno}}</textarea>
+            <textarea name="respostaAluno" id="respostaAluno" rows="5" cols="50">{{respostaAluno}}</textarea>
             <input type="submit" value="Enviar">
         </form>
 
@@ -75,5 +75,17 @@
     <!-- <footer>
         <h3><a class="external" href="https://github.com/LuisBrescia" target="_blank">Luis Brescia</a></h3>
     </footer> -->
+    <script>
+        
+        function salvaResposta() {
+            var respostaAluno = document.getElementById('respostaAluno').value;
+            localStorage.setItem('resposta{{questao}}', respostaAluno);
+        }
+
+        var respostasUsuario = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        console.log(respostasUsuario['{{questao}}' - 1])
+        respostasUsuario['{{questao}}' - 1] = localStorage.getItem('resposta{{questao}}');
+        document.getElementById('respostaAluno').value = respostasUsuario['{{questao}}' - 1];
+    </script>
 </body>
 </html>

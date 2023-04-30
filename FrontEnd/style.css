@@ -65,7 +65,7 @@ footer:hover {background: linear-gradient(#062846, #062846);}
 .btn-principal:hover {background: linear-gradient(#062846, #062846); color: aliceblue; cursor: pointer;}
 
 .mainIndex ul { width: 60%; display: flex; flex-flow: column nowrap; text-align: center; border: 2px solid #062846; background-color: aliceblue;}
-.mainIndex ul input {width: 95%; text-align: center; background-color: aliceblue; border: none; margin: none; padding: 2em 0;}
+.mainIndex ul input {font-size: large;width: 95%; text-align: center; background-color: aliceblue; border: none; margin: none; padding: 1em 0;}
 .mainIndex button {width: 100%; padding: 1em; font-size: 1.2em;}
 .mainIndex ul h2 {background: linear-gradient(#062846, #003869); color: aliceblue; border-bottom: 2px solid #062846; font-size: 1.5em; padding: .5em;}
 
@@ -78,5 +78,4 @@ footer:hover {background: linear-gradient(#062846, #062846);}
     .mainIndex {width: 90%;}
     .mainIndex ul {width: 90%;}
     header {justify-content: center;}
-    img {display: none;}
 }   

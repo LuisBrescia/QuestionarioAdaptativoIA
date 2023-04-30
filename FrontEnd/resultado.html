@@ -5,17 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questionário Adaptativo</title>
-    <link rel="stylesheet" href="{{ url_for ('static', filename='style.css') }}">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- * HEADER -->
     <header> 
-        <a class="external" href="{{ url_for('inicia') }}"><h1>Questionário adaptativo IA</h1></a>
-        <img src="{{ url_for('static', filename='Imagens/Logo_CEFET-MG.png') }}" height="60px" alt="Logo_CEFET-MG">
+        <a class="external" href="index.html"><h1>Questionário adaptativo IA</h1></a>
+        <img src="Imagens/Logo_CEFET-MG.png" height="60px" alt="Logo_CEFET-MG">
     </header>
 
     <!-- * MAIN -->     
-    teste
     <main class="mainIndex feedback" style="display: flex; justify-content: center;">
         <ul>
             <li><h2>Feedback</h2></li>
@@ -30,7 +29,7 @@
             <li id="q9" class="notaQuestao"></li>
             <li id="q10" class="notaQuestao"></li>
             <li>
-                <a href="{{ url_for('inicia')}}">
+                <a href="index.html">
                     <button class="btn-principal">HOME</button>
                 </a>
             </li>

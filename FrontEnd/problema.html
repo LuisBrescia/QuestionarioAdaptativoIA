@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questionário Adaptativo</title>
-    <link rel="stylesheet" href="{{ url_for ('static', filename='style.css') }}">
+    <link rel="stylesheet" href="style.css">
     <script src="{{ url_for('static', filename='script.js') }}"> </script>
 </head>
 <body>
     <!-- * HEADER -->
     <header> 
-        <a class="external" href="{{ url_for('inicia') }}"><h1>Questionário adaptativo IA</h1></a>
-        <img src="{{ url_for('static', filename='Imagens/Logo_CEFET-MG.png') }}" height="60px" alt="Logo_CEFET-MG">
+        <a class="external" href="index.html"><h1>Questionário adaptativo IA</h1></a>
+        <img src="Imagens/Logo_CEFET-MG.png" height="60px" alt="Logo_CEFET-MG">
     </header>
 
     <!-- * MAIN -->
@@ -65,7 +65,7 @@
         <div class="resultado">
             <h1 style="text-align: center;">{{ resposta }}</h1>
             <h1 id="statusColor" style="text-align: center">{{status}}</h1>
-            <a style="margin: 0 auto; "href="{{ url_for('resultado') }}"><input type="submit" value="Entregar Questionário"></a>
+            <a style="margin: 0 auto; "href="resultado.html"><input type="submit" value="Entregar Questionário"></a>
         </div>
     </main>
     

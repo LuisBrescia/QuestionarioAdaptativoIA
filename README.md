@@ -21,21 +21,21 @@ A idéia é criar/manipular uma inteligência artificial capaz de desenvolver pe
 |RF-01| Corrigir respostas dissertativas para essas perguntas. | Média | :white_check_mark: |
 |RF-02| Navegar entre perguntas. | Média | :white_check_mark: |
 |RF-03| Criar perguntas relacionadas as áreas de conhecimento propostas. | Baixa | :x: |
-|RF-04| Questões organizadas aleatóriamente cada vez que o questionário é carregado. | Média | :x: |
-|RF-05| Exibir questões já respondidas, e as que faltam ser respondidas. | Média | :x: |
+|RF-04| Questões organizadas aleatóriamente cada vez que o questionário é carregado. | Média | :white_check_mark: |
+|RF-05| Exibir questões já respondidas, e as que faltam ser respondidas. | Média | :white_check_mark: |
+|RF-06| Carregar uma tela com o resultado do questionário. | Alta | :x: |
 
 ## Requisitos não funcionais
 |ID    | Descrição do Requisito  | Prioridade | Status: |
 |------|-----------------------------------------|----|------|
-|RNF-03| Feedback deverá ser preciso. | Alta | :x: |
-
+|RNF-01| Feedback deverá ser preciso. | Alta | :x: |
+|RNF-02| Site não deverá demorar mais que 5 segundos para processar uma resposta. | Média | :white_check_mark: |
 
 ## Instruções de Utilização:
 > python 3.10.111 instalado <br/>
-criar um ambiente virtual e rodar os seguintes comandos <br/>
-pip install flask <br/>
-pip install transformers <br/>
-pip install torch <br/>
-pip install torchvision <br/>
+cd QuestionarioAdaptativoIA<br/>
+criar um ambiente virtual e instalar dependências do projeto<br/>
+pip install -r requirements.txt <br/>
+python -u IA/inicia.py<br/>
 
 [Canva](https://www.canva.com/design/DAFf8eWmQzk/IDTx_2JrTRAv67fTLhp25g/edit?utm_content=DAFf8eWmQzk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)

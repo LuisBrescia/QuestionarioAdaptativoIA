@@ -22,8 +22,8 @@ A idéia é criar/manipular uma inteligência artificial capaz de desenvolver pe
 |RF-02| Navegar entre perguntas. | Média | :white_check_mark: |
 |RF-03| Criar perguntas relacionadas as áreas de conhecimento propostas. | Baixa | :x: |
 |RF-04| Questões organizadas aleatóriamente cada vez que o questionário é carregado. | Média | :white_check_mark: |
-|RF-05| Exibir questões já respondidas, e as que faltam ser respondidas. | Média | :white_check_mark: |
-|RF-06| Carregar uma tela com o resultado do questionário. | Alta | :x: |
+|RF-05| Exibir questões já respondidas, e as que faltam ser respondidas. | Média | :x: |
+|RF-06| Carregar uma tela com o resultado do questionário. | Alta | :white_check_mark: |
 
 ## Requisitos não funcionais
 |ID    | Descrição do Requisito  | Prioridade | Status: |

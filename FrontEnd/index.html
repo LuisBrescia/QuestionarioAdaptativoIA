@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,42 +8,53 @@
     <title>Questionário Adaptativo</title>
     <link rel="stylesheet" href="{{ url_for ('static', filename='style.css') }}">
 </head>
+
 <body>
     <!-- * HEADER -->
-    <header> 
-        <a class="external" href="{{ url_for('inicia') }}"><h1>Questionário adaptativo IA</h1></a>
-        <a href="https://www.cefetmg.br" target="_blank"><img src="{{ url_for('static', filename='Imagens/Logo_CEFET-MG.png') }}" height="75px" alt="Logo_CEFET-MG"></a>
+    <header>
+        <a class="external" href="{{ url_for('inicia') }}">
+            <h1>Questionário adaptativo IA</h1>
+        </a>
+        <a href="https://www.cefetmg.br" target="_blank"><img
+                src="{{ url_for('static', filename='Imagens/Logo_CEFET-MG.png') }}" height="75px"
+                alt="Logo_CEFET-MG"></a>
     </header>
 
-    <!-- * MAIN -->     
+    <!-- * MAIN -->
     <main class="mainIndex" style="display: flex; justify-content: center;">
         <ul>
-            <li><h2>Matrícula</h2></li>
+            <li>
+                <h2>Matrícula</h2>
+            </li>
             <li><input type="text" placeholder="Matrícula"></li>
-            <li><h2 style="border-top: 2px solid #062846; background: linear-gradient(#00386A, #00386A);">Senha</h2></li>
+            <li>
+                <h2 style="border-top: 2px solid #062846; background: linear-gradient(#00386A, #00386A);">Senha</h2>
+            </li>
             <li><input type="password" placeholder="Senha"></li>
         </ul>
     </main>
 
     <div class="resultado">
-        <a style="margin: 3em auto;" href="{{ url_for('problema', numeroQuestao = 1)}}"><input type="submit" value="INICIAR"></a>
+        <a style="margin: 3em auto;" href="{{ url_for('problema', numeroQuestao = 1)}}"><input type="submit"
+                value="INICIAR"></a>
     </div>
 
     <!-- > Botão para indicar quais matérias o aluno deseja estudar -->
 
     <!-- * FOOTER -->
     <a href="https://github.com/LuisBrescia" target="_blank">
-    <footer>
-        <h3>Luís Brescia</h3>
-    </footer>
+        <footer>
+            <h3>Luís Brescia</h3>
+        </footer>
     </a>
     <!-- * Sempre que a página inicial for carregada, o Local Storage será limpo -->
     <script>
-        localStorage.clear(); 
+        localStorage.clear();
         for (let i = 1; i <= 10; i++) {
             localStorage.setItem(`resposta${i}`, "");
             localStorage.setItem(`status${i}`, "Não respondida")
         }
     </script>
 </body>
+
 </html>

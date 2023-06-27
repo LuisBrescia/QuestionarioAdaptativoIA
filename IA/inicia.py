@@ -40,4 +40,5 @@ def resultado():
 
 # * Caso o arquivo seja executado diretamente
 if __name__ == '__main__':
-    questionario.run(debug=True)
+    questionario.run(debug=False)
+
